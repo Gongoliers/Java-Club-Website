@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <title>PHS Java Club</title>
+</head>
+<body>
+    <h1 class="fontCourier">Java Club - Media</h1>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="homePage.html">Home</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="programPage.html">Programs</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="bioPage.html">Bio</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="mediaPage.html">Media</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="programsPlusPage.html">Programs+</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="hardwarePage.html">Hardware/Software</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="calendarPage.html">Calendar</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="creatorsPage.html">Creators</a></h2>
+  
+    <center><p><button id = "mediaButton" onClick = "buttonClicked()"> Click here for a random image from the class!</button></p></center>
+  
+    <img id = "mediaImage" src = "images/StudentWorking04.jpg">
+  
+    <center><video class='center' id = "mediaVideo" width="700" height="440" controls>
+      <source src="videos/robot.mp4" type="video/mp4">
+      </video></center>
+  
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script>
+
+    var image = new Date("4/17/2018 2:00 pm");
+
+    function buttonClicked() {
+      var randNumber = Math.floor(Math.random() * Math.floor(9))
+     
+      if(randNumber > 8) {
+        document.getElementById("mediaImage").src= "images/StudentWorking08.jpg";
+      }else if(randNumber > 7) {
+        document.getElementById("mediaImage").src= "images/StudentWorking07.jpg";
+      }else if(randNumber > 6) {
+        document.getElementById("mediaImage").src= "images/StudentWorking04.jpg";
+      }else if(randNumber > 5) {
+        document.getElementById("mediaImage").src= "images/hardwareImage01.png";
+      }else if(randNumber > 4) {
+        document.getElementById("mediaImage").src= "images/hardwareImage02.png";
+      }else if(randNumber > 3) {
+        document.getElementById("mediaImage").src= "images/classImage01.jpg";
+      }else if(randNumber > 2) {
+        document.getElementById("mediaImage").src= "images/classImage02.jpg";
+      }else if(randNumber > 1) {
+        document.getElementById("mediaImage").src= "images/classImage03.jpg";
+      }else {
+        document.getElementById("mediaImage").src= "images/StudentWorking12.jpg";
+      } 
+    }
+
+  </script>
+    
+</body>
+</html>

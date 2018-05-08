@@ -1,0 +1,68 @@
+body{
+    background-color: whitesmoke;
+}
+h1{
+    font-size: 50px;
+    margin-left: 10px;
+}
+
+.fontCourier{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+}
+
+#linkDirectories{
+    text-decoration-line: underline;
+    display: inline;
+    padding: 10px 30px;
+}
+
+a {
+    color: dodgerblue;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width: 25%;
+}
+#programDescription {
+  text-align: center;
+}
+
+#hardwareRight {
+  float: right;
+  height: 200px;
+  width: auto;
+}
+
+#hardwareLeft {
+  float: left;
+  height: 200px;
+  width: auto;
+}
+
+#headerImage {
+  width: 600px;
+  height: auto
+}
+
+#program {
+  color: green;
+}
+
+#programIndent1 {
+  color: green;
+  margin-left: 50px;
+}
+
+#programIndent2 {
+  color: green;
+  margin-left: 100px;
+}
+
+#mediaVideo {
+  
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <title>PHS Java Club</title>
+</head>
+<body>
+    <h1 class="fontCourier">Java Club - Programs</h1>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="homePage.html">Home</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="programPage.html">Programs</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="bioPage.html">Bio</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="mediaPage.html">Media</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="programsPlusPage.html">Programs+</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="hardwarePage.html">Hardware/Software</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="calendarPage.html">Calendar</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="creatorsPage.html">Creators</a></h2>
+
+  <p id = "programDescription" class = "fontCourier"><br><br><br>The bit of the program below deals with driving around the 2018 robot the FRC Team 5112, "The Gongoliers", used during competition this year. It will move forward only if the joystick is bring pushed over 10% in one direction and has the its entire speed modified by several multipliers to keep it in check.</p>
+
+  <p id = "program" class = "fontCourier"><br>if (joystick.getY() &gt; 0.1 || joystick.getY() &lt; -0.1) { </p>
+  <p id = "programIndent1" class = "fontCourier"> diffDrive.arcadeDrive((joystick.getY() - 0.1) * 10 / 9 * throttle,  joystick.getZ() * -1 * turningThrottle); </p>
+  <p id = "program" class = "fontCourier"> } else { </p>
+  <p id = "programIndent1" class = "fontCourier"> diffDrive.arcadeDrive(0, joystick.getZ() * -1 * turningThrottle); </p>
+  <p id = "program" class = "fontCourier"> } </p>
+  
+  <p id = "programDescription" class = "fontCourier"><br>The bit of the program below deals with turbo mode that the driver used during competition this year. While holding down one of two buttons, turbo mode would be activated. At this point the multipliers that set the max speed of the drivetrain would be increased and allow the driver to have an increased amount of speed.</p>
+
+  
+  <p id = "program" class = "fontCourier"><br>if (joystick.getRawButton(1) || controller.getRawButton(6)) { </p>
+  <p id = "programIndent1" class = "fontCourier"> throttle = MAX_THROTTLE; </p>
+  <p id = "programIndent1" class = "fontCourier"> turningThrottle = MAX_TURNING_THROTTLE; </p>
+  <p id = "program" class = "fontCourier"> } else { </p>
+  <p id = "programIndent1" class = "fontCourier"> throttle = MIN_THROTTLE; </p>
+  <p id = "programIndent1" class = "fontCourier"> turningThrottle = MIN_TURNING_THROTTLE; </p>
+  <p id = "program" class = "fontCourier"> } </p>
+
+
+  
+  
+  <p class = "fontCourier"><br><br><br><br><br><strong>Links to Github projects.</strong></p>
+  <ul>
+    <li><a href = "https://github.com/ChrisVieira/RunningACoupleMotors">RunningACoupleMotors</a></li>
+    <li><a href = "https://github.com/ChrisVieira/Robot2016DrivetrainEssentials">Robot2016DrivetrainEssentials</a></li>
+    <li><a href = "https://github.com/ChrisVieira/DrivetrainTest">DrivetrainTest</a></li>
+    <li><a href = "https://github.com/ChrisVieira/Magni">Magni</a></li>
+    <li><a href = "https://github.com/Gongoliers/Robot2018Competition">Robot2018Competition</a></li>
+    <li><a href = "https://github.com/Gongoliers/GongoliersRobot2018">GongoliersRobot2018</a></li>
+    <li><a href = "https://github.com/Gongoliers/Robot2018Drivetrain">Robot2018Drivetrain</a></li>
+    <li><a href = "https://github.com/Gongoliers/Robot2015UpdatedProgram">Robot2015UpdatedProgram</a></li>
+    <li><a href = "https://github.com/Gongoliers/RobotDriveAndTalonSRXExample">RobotDriveAndTalonSRXExample</a></li>
+    <li><a href = "https://github.com/Gongoliers/Robot2017DrivetrainEssentials">Robot2017DrivetrainEssentials</a></li>
+    <li><a href = "https://github.com/Gongoliers/2015-Robot-Driving-Program">Robot-2015-Driving-Program</a></li>
+    <li><a href = "https://github.com/Gongoliers/Robot2017V3">Robot2017V3</a></li>
+    <li><a href = "https://github.com/Gongoliers/Jaguar6CIMs">Jaguar6CIMs</a></li>
+    <li><a href = "https://github.com/Gongoliers/TestCamera">TestCamera</a></li>
+    <li><a href = "https://github.com/Gongoliers/CameraTesting">CameraTesting</a></li>
+    <li><a href = "https://github.com/Gongoliers/GearBoxTest">GearBoxTest</a></li>
+    <li><a href = "https://github.com/Gongoliers/2016-Robot-Code">2016-Robot-Code</a></li>
+    <li><a href = "https://github.com/Gongoliers/JavaClassRobot">JavaClassRobot</a></li>
+    <li><a href = "https://github.com/Gongoliers/Robot-2015">Robot-2015</a></li>
+    <li><a href = "https://github.com/Gongoliers/TShirtCannon">TShirtCannon</a></li>
+    <li><a href = "https://github.com/Gongoliers/CommandBasedTest2015">CommandBasedTest2015</a></li>
+    <li><a href = "https://github.com/Gongoliers/Gongoliers-T-Shirt-Cannon">Gongoliers-T-Shirt-Cannon</a></li>
+    <li><a href = "https://github.com/Gongoliers/FRC-2014-code-team-5112">FRC-2014-code-team-5112</a></li>
+    <li><a href = "https://github.com/Gongoliers/FRC-5112-Code-2015">FRC-5112-Code-2015</a></li>
+  </ul>
+  <p class = "fontCourier"><strong>Links to Github accounts.</strong></p>
+  <ul>
+    <li><a href = "https://github.com/Gongoliers?page=1">Gongoliers Group</a></li>
+    <li><a href = "https://github.com/orgs/Gongoliers/people/ChrisVieira">Christopher Vieira</a></li>
+    <li><a href = "https://github.com/orgs/Gongoliers/people/kylecorry31">Kyle Corry</a></li>
+    <li><a href = "https://github.com/orgs/Gongoliers/people/NicholasBottone">Nicholas Bottone</a></li>
+    <li><a href = "https://github.com/orgs/Gongoliers/people/sethdrexler20">Seth Drexler</a></li>
+  </ul>
+  </body>
+</html>

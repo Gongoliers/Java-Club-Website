@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <title>PHS Java Club</title>
+</head>
+<body>
+    <h1 class="fontCourier">Java Club - Calendar</h1>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="homePage.html">Home</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="programPage.html">Programs</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="bioPage.html">Bio</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="mediaPage.html">Media</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="programsPlusPage.html">Programs+</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="hardwarePage.html">Hardware/Software</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="calendarPage.html">Calendar</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="creatorsPage.html">Creators</a></h2>
+ 
+  <p class = "fontCourier">The next meeting will take place: <p id = "nextMeet"></p>
+
+  <p class = "fontCourier">The next couple meetings that will take place:</p>
+  <ul>
+    <li>4/17/2018 2:00 pm</li>
+    <li>4/24/2018 2:00 pm</li>
+    <li>5/1/2018 2:00 pm</li>
+  </ul>
+  
+  <!-- 
+      The following code was modeled from http://cs110.wellesley.edu/project/min-reqs/countdown/countdown.html
+  -->
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script>
+    
+    var nextMeet = new Date("4/24/2018 2:00 pm");
+    
+    function CountDown() {
+    var now = new Date();
+    var diff = nextMeet.getTime() - now.getTime();
+    var days = diff / (1000 * 60 * 60 * 24);
+    var days_display = days.toFixed();
+    var size = 16;
+    
+      if( days < 0 ) {
+        $("#nextMeet")
+          .html(days_display+ " days ago.")
+          .css("font-size","20px");
+      } else {
+        $("#nextMeet")
+          .html(days_display+ " days from now!")
+          .css("font-size",size+"px");
+      }  
+    }
+    
+  CountDown();
+    
+  </script>
+  </body>
+</html>

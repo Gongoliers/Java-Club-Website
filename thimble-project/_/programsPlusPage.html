@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <title>PHS Java Club</title>
+</head>
+<body>
+    <h1 class="fontCourier">Java Club - Programs+</h1>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="homePage.html">Home</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="programPage.html">Programs</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="bioPage.html">Bio</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="mediaPage.html">Media</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="programsPlusPage.html">Programs+</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="hardwarePage.html">Hardware/Software</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="calendarPage.html">Calendar</a></h2>
+    <h2 id = "linkDirectories" class="fontCourier"> <a href="creatorsPage.html">Creators</a></h2>
+
+  <p id = "programDescription" class = "fontCourier"><br><br>The program below deals with the elevator that was present on FRC team 5112', "The Gongoliers", elevator this year. If the joystick is inputing a value of less than 5% in either direction it will run the motor at a constant speed to keep it in the same position. If it is greater than 5% in the positive direction it will life the elevator. If it is greater than 5% in the negative direction it will slowly drop the elevator. The video below highlights ethis around 12 seconds in.</p>
+
+
+  
+  <p id = "program" class = "fontCourier"><br>if (joystick.getY() > 0.05) {</p>
+  <p id = "programIndent1" class = "fontCourier">motorController.set((joystick.getY()-0.05)*0.85*100/95+elevatorConstant);</p>
+  <p id = "programIndent1" class = "fontCourier">SmartDashboard.putNumber("Attack Joystick Value: ", joystick.getY());</p>
+  <p id = "program" class = "fontCourier">} else if (joystick.getY() &lt; -.05) {</p>
+  <p id = "programIndent1" class = "fontCourier">motorController.set((joystick.getY()+0.05)*0.15*100/95+elevatorConstant * 0.5 + 0.075);</p>
+  <p id = "programIndent1" class = "fontCourier">SmartDashboard.putNumber("Attack Joystick Value: ", joystick.getY());</p>
+  <p id = "program" class = "fontCourier">} else {</p>
+  <p id = "programIndent1" class = "fontCourier">motorController.set(0.15 * multiplier);</p>
+  <p id = "program" class = "fontCourier"> } </p>
+
+  <center>
+  <p class = "fontCourier">Video:</p>
+  <video  width="700" height="440" controls>
+    <source src="videos/robot.mp4" type="video/mp4">
+  </video>
+  </center>
+  
+  <p id = "programDescription" class = "fontCourier">The program below deals with 5112's intake this year. If the controller's joystick is pushed forward it will run the intake to throw things out of the robot. The opposite happens if the joystick is pushed in the opposite direction. If the joystick is pushed to the left it will run all the intake motors clockwise and the opposite will occur if the joystick is pushed to the right. Lastly there are several multipliers that are thrown in the midst to change the max value of the motors and to allow only the inner intake motors to be able to run at certain times. This can be shown in the video above around 5 seconds in. </p>
+
+  
+  <p id = "program" class = "fontCourier">if (xboxController.getXButton()) {</p>
+  <p id = "programIndent1" class = "fontCourier">if (xboxController.getRawAxis(1) > 0.1) {</p>
+  <p id = "programIndent2" class = "fontCourier"> innerMotorController.set(xboxController.getRawAxis(1));</p>
+  <p id = "program" class = "fontCourier"> outerMotorController.set(xboxController.getRawAxis(1));</p>
+  <p id = "programIndent1" class = "fontCourier"> } else if (xboxController.getRawAxis(1) &lt; -0.1) {</p>
+  <p id = "program" class = "fontCourier"> innerMotorController.set(xboxController.getRawAxis(1) * innerMultiplier);</p>
+  <p id = "program" class = "fontCourier"> outerMotorController.set(xboxController.getRawAxis(1) * outerMultiplier);</p>
+  <p id = "program" class = "fontCourier"> } else if (xboxController.getRawAxis(0) &lt; -0.1) {</p>
+  <p id = "program" class = "fontCourier"> clockwise(xboxController.getRawAxis(0) * rotateMultiplier);</p>
+  <p id = "program" class = "fontCourier"> } else if (xboxController.getRawAxis(0) > 0.1) {</p>
+  <p id = "program" class = "fontCourier"> counterclockwise(xboxController.getRawAxis(0) * rotateMultiplier*-1);</p>
+  <p id = "program" class = "fontCourier"> } else if (joystick.getY() > 0.1) {</p>
+  <p id = "program" class = "fontCourier"> counterclockwise(joystick.getY() * elevatorJoystickMultiplier * -1 - 0.1);</p>
+  <p id = "program" class = "fontCourier"> } else {</p>
+  <p id = "program" class = "fontCourier"> motorController.stopMotor();</p>
+  <p id = "program" class = "fontCourier"> } </p>
+
+
+  
+  
+</body>
+</html>
